@@ -1,0 +1,151 @@
+/* FRP 服务端配置界面样式 */
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* 通用样式调整 */
+.container {
+    max-width: 1200px;
+}
+
+/* 表单和卡片样式 */
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.rounded-3 {
+    border-radius: 0.5rem !important;
+}
+
+.bg-light {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 配置预览区域 */
+pre {
+    font-size: 0.875rem;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+#configPreview, #operationLogs {
+    min-height: 150px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* 状态指示器样式 */
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.status-running {
+    background-color: #28a745;
+}
+
+.status-stopped {
+    background-color: #dc3545;
+}
+
+.status-unknown {
+    background-color: #6c757d;
+}
+
+/* 表单元素间距调整 */
+.tab-content {
+    padding: 1rem 0;
+}
+
+.form-switch {
+    padding-left: 2.5em;
+}
+
+/* 按钮交互效果 */
+.btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .col-md-8, .col-md-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* 输入表单组的交互效果 */
+.form-control, .form-select {
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-text {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* 自定义开关样式 */
+.form-switch .form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* 自定义选项卡样式 */
+.nav-tabs .nav-link {
+    color: #495057;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0d6efd;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+/* 自定义通知样式 */
+.toast {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* 改进可访问性 */
+.form-label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* 打印样式 - 隐藏非必要元素 */
+@media print {
+    .btn, .navbar, .footer {
+        display: none !important;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        background-color: #ffffff;
+    }
+}
