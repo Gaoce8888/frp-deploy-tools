@@ -10,6 +10,8 @@
 - **setup_frp_client.sh** - FRP客户端快速配置脚本
 - **setup_frp_server.sh** - FRP服务端配置脚本
 - **install_frp_windows.bat** - Windows环境下的FRP安装批处理脚本
+- **quick_install.sh** - Linux环境下的一键安装脚本
+- **quick_install.ps1** - Windows环境下的一键安装PowerShell脚本
 
 ## 功能特点
 
@@ -21,6 +23,20 @@
 - ✅ 防重复安装与配置备份
 - ✅ 详细的日志记录
 - ✅ 系统服务自动创建（开机自启）
+
+## 一键安装指令
+
+### Linux一键安装（Bash）
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Gaoce8888/frp-deploy-tools/main/quick_install.sh)"
+```
+
+### Windows一键安装（PowerShell）
+
+```powershell
+PowerShell -Command "Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Gaoce8888/frp-deploy-tools/main/quick_install.ps1')"
+```
 
 ## 详细使用说明
 
